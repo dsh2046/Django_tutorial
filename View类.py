@@ -1,4 +1,4 @@
-from django.views.generic.base import View
+from django.views.generic.base import View   # urls.py:  url(r'^login/', LoginView.as_view(), name='login')
 
 class LoginView(View):
     def get(self, request):
@@ -13,3 +13,5 @@ class LoginView(View):
             return render(request, 'index.html', {'username': username})
         else:
             return render(request, 'login.html', {})
+        
+  
